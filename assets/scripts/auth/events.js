@@ -34,8 +34,8 @@ const onSignOut = function (event) {
   event.preventDefault()
 
   api.signOut()
-    .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .then(ui.onSignOutSuccess)
+    .catch(ui.OnSignOutFailure)
 }
 
 const addHandlers = () => {
@@ -44,6 +44,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePw)
   $('#change-password').hide()
+  $('#sign-out').hide()
 }
 
 module.exports = {
