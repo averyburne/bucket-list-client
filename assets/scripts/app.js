@@ -7,5 +7,5 @@
 // require('./example')
 
 $(() => {
-  // your JS code goes here
+  $('#sign-in').on('submit', authEvents.onSignIn)
 })
