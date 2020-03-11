@@ -10,21 +10,36 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-up').trigger('reset')
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
+  clearMessage()
 }
 
 const onSignInFailure = function (response) {
   $('#message').text('Sign in failed')
   $('#sign-in').trigger('reset')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onSignUpSuccess = function (response) {
-  console.log(response)
   $('#message').text('Successfully signed up')
+  $('#sign-up').trigger('reset')
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
+  clearMessage()
 }
 
 const onSignUpFailure = function (response) {
-  console.log(response)
   $('#message').text('Could not sign up')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onChangeSuccess = () => {
@@ -38,7 +53,6 @@ const onChangeSuccess = () => {
 
 const onChangeFailure = () => {
   $('#message').text('Change password failed')
-  $('#change-password').trigger('reset')
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
@@ -60,10 +74,18 @@ const onSignOutSuccess = function () {
   $('#sign-up').show()
   $('#message').text('Signed out successfully')
   store.user = null
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
+  clearMessage()
 }
 
 const onSignOutFailure = function (error) {
   $('#message').text('Error on sign out: ' + error.statusText)
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+  clearMessage()
 }
 
 module.exports = {
