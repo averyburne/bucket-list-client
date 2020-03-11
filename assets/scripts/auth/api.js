@@ -1,5 +1,6 @@
 'use strict'
 
+
 const config = require('./../config')
 
 const signIn = function (data) {
@@ -10,6 +11,16 @@ const signIn = function (data) {
   })
 }
 
+const signUp = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/sign-up',
+    method: 'POST',
+    data: data
+  })
+}
+
 module.exports = {
-  signIn
+  signIn,
+  signUp
+
 }
