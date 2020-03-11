@@ -27,6 +27,32 @@ const onSignUpFailure = function (response) {
   $('#message').text('Could not sign up')
 }
 
+const onChangeSuccess = () => {
+  $('#message').text(`Successfully changed password`)
+  $('#change-password').trigger('reset')
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
+  clearMessage()
+}
+
+const onChangeFailure = () => {
+  $('#message').text('Change password failed')
+  $('#change-password').trigger('reset')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+  clearMessage()
+}
+
+const clearMessage = () => {
+  setTimeout(function () {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+    $('#message').removeClass('success')
+  }, 5000)
+}
+
 const onSignOutSuccess = function () {
   $('.signed-in').hide()
   $('.input-form').hide()
@@ -46,5 +72,7 @@ module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onChangeSuccess,
+  onChangeFailure
 }
