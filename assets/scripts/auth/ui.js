@@ -70,6 +70,7 @@ const clearMessage = () => {
 const onSignOutSuccess = function () {
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('#change-password').trigger('reset')
   $('#sign-in').show()
   $('#sign-up').show()
   $('#message').text('Signed out successfully')
