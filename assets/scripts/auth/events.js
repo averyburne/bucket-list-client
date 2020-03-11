@@ -1,7 +1,7 @@
+
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-
 
 const onSignIn = function (event) {
   event.preventDefault()
@@ -21,14 +21,23 @@ const onSignUp = function (event) {
     .catch(ui.onSignUpFailure)
 }
 
+const onSignOut = function (event) {
+  event.preventDefault()
+
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
+  $('#sign-out').on('submit', onSignOut)
 }
 
 module.exports = {
   onSignUp,
-  addHandlers,
-  onSignIn
-
+  onSignIn,
+  onSignOut,
+  addHandlers
 }

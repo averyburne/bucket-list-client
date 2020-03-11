@@ -17,10 +17,6 @@ const onSignInFailure = function (response) {
   $('#sign-in').trigger('reset')
 }
 
-// const store = require('./../store')
-// const showLiftsTemplate = require('./../templates/lift-listing.handlebars')
-// const showLiftTemplate = require('./../templates/single-lift-listing.handlebars')
-
 const onSignUpSuccess = function (response) {
   console.log(response)
   $('#message').text('Successfully signed up')
@@ -31,9 +27,24 @@ const onSignUpFailure = function (response) {
   $('#message').text('Could not sign up')
 }
 
+const onSignOutSuccess = function () {
+  $('.signed-in').hide()
+  $('.input-form').hide()
+  $('.signed-out').show()
+  $('.content').empty()
+  $('#notice').text('Signed out successfully')
+  store.user = null
+}
+
+const onSignOutFailure = function (error) {
+  $('#notice').text('Error on sign out: ' + error.statusText)
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
