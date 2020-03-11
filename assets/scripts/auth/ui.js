@@ -54,16 +54,16 @@ const clearMessage = () => {
 }
 
 const onSignOutSuccess = function () {
-  $('.signed-in').hide()
-  $('.input-form').hide()
-  $('.signed-out').show()
-  $('.content').empty()
-  $('#notice').text('Signed out successfully')
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  $('#message').text('Signed out successfully')
   store.user = null
 }
 
 const onSignOutFailure = function (error) {
-  $('#notice').text('Error on sign out: ' + error.statusText)
+  $('#message').text('Error on sign out: ' + error.statusText)
 }
 
 module.exports = {
