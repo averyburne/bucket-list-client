@@ -11,6 +11,7 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-up').trigger('reset')
+  $('.content').show()
   listItemEvents.onIndex()
 
   $('#message').removeClass('failure')
