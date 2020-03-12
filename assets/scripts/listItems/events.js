@@ -6,6 +6,9 @@ const onCreate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.create(data)
+    .then(function () {
+      onIndex(event)
+    })
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
 }
@@ -28,6 +31,9 @@ const onUpdate = function (event) {
   }
 
   api.update(id, data)
+    .then(function () {
+      onIndex(event)
+    })
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
 }
@@ -36,6 +42,9 @@ const onDelete = function (event) {
   event.preventDefault()
   const id = $(event.target).data('id')
   api.destroy(id)
+    .then(function () {
+      onIndex(event)
+    })
     .then(ui.onDeleteSuccess)
     .catch(ui.onDeleteFailure)
 }
