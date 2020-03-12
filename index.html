@@ -48,5 +48,15 @@
       <input type="submit" value="Sign Out!">
     </fieldset>
   </form>
+
+  <form id="add-listItem">
+      <fieldset>
+        <legend>Add a list item to your bucket</legend>
+        <input name="listItem[title]" type="text" placeholder="Title" required>
+        <textarea name="listItem[description]" type="text" placeholder="Description" required></textarea>
+        <input type="submit" value="Add List Item">
+      </fieldset>
+    </form>
+    <button id="get-listItems">Get List Items</button>
     </body>
 </html>
