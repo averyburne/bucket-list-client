@@ -27,7 +27,7 @@ const onUpdate = function (event) {
 
 const onDelete = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const id = $(event.target).data('id')
   api.destroy(id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onDeleteFailure)
@@ -35,7 +35,7 @@ const onDelete = function (event) {
 
 const addHandlers = () => {
   $('#add-listItem').on('submit', onCreate)
-  $('#get-listItems').on('submit', onIndex)
+  $('#get-listItems').on('click', onIndex)
   $('.content').on('click', '.remove-listItem', onDelete)
   $('.content').on('click', '.update-listItem', onUpdate)
 }

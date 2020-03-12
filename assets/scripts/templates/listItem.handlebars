@@ -1,6 +1,7 @@
 <div class="row">
   {{#each listItems as |listItem|}}
-  <section class="col-3" data-id="{{listItem.id}}">
+  {{log listItem}}
+  <section class="col-3" data-id="{{listItem._id}}">
     <h6>Title:</h6>
     <p>
       {{#if listItem.title}}
@@ -17,7 +18,7 @@
         No description provided.
       {{/if}}
     </p>
-    {{> remove-listItem id=listItem.id}}
+    {{> remove-listItem id=listItem._id}}
   </section>
 
   {{/each}}
