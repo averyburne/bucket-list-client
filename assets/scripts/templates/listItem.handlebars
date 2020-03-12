@@ -1,6 +1,5 @@
 <div class="row">
   {{#each listItems as |listItem|}}
-  {{log listItem}}
   <section class="col-3" data-id="{{listItem._id}}">
     <h6>Title:</h6>
     <p>
@@ -18,8 +17,15 @@
         No description provided.
       {{/if}}
     </p>
+      {{#if listItem.completed}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed"
+         checked>
+      <label for="completed">Complete</label>
+      {{else}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed">
+      <label for="completed">Complete</label>
+      {{/if}}
     {{> remove-listItem id=listItem._id}}
   </section>
-
   {{/each}}
 </div>
