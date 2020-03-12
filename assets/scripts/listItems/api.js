@@ -24,6 +24,8 @@ const index = () => {
 }
 
 const update = (id, data) => {
+  console.log(data)
+  console.log(id)
   return $.ajax({
     url: config.apiUrl + '/listItems/' + id,
     method: 'PATCH',

@@ -19,8 +19,15 @@ const onIndex = function (event) {
 
 const onUpdate = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.update(data)
+  const id = $(event.target).data('id')
+  const completed = !$(event.target).data('bool')
+  const data = {
+    "listItem": {
+      "completed": completed
+    }
+  }
+
+  api.update(id, data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
 }
@@ -38,6 +45,7 @@ const addHandlers = () => {
   $('#get-listItems').on('click', onIndex)
   $('.content').on('click', '.remove-listItem', onDelete)
   $('.content').on('click', '.update-listItem', onUpdate)
+  $('.content').on('click', '.completed', onUpdate)
 }
 
 module.exports = {
