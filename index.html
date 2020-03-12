@@ -1,52 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Bucket List</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Bucket List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Bucket List</h1>
-      <div id='message'></div>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-12 text-center'>
+  <h1>Bucket List</h1>
+    </div>
+    <div class='col-12 text-center'>
+  <h5 id='message'></h5>
+    </div>
+  </div>
+
+    <div class='row text-center col-12'>
+
+<div class='col-1'>
+</div>
+
+    <div class='form-group text-center col-4'>
   <form id="sign-in">
     <fieldset>
+
       <legend>Sign In!</legend>
-      <input name="credentials[email]" type="email" placeholder="Email">
-      <input name="credentials[password]" type="password" placeholder="Password">
-      <input type="submit" value="Sign In!">
+      <input name="credentials[email]" class="form-control" type="email" placeholder="Email">
+      <input name="credentials[password]" class="form-control" type="password" placeholder="Password">
+      <input type="submit" class="btn btn-primary" value="Sign In!">
+
     </fieldset>
   </form>
+    </div>
 
+    <div class='col-2'>
+    </div>
+
+  <div class='form-group text-center col-4'>
   <form id="sign-up">
     <fieldset>
+
       <legend>Sign Up!</legend>
-      <input name="credentials[email]" type="email" placeholder="example@example.com">
-      <input name="credentials[password]" type="password" placeholder="Password">
-      <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-      <input type="submit" value="Sign Up!">
+      <input name="credentials[email]" type="email" class="form-control" placeholder="example@example.com">
+      <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+      <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm Password">
+      <input type="submit" class="btn btn-primary" value="Sign Up!">
+
     </fieldset>
   </form>
+      </div>
 
+      <div class='col-1'>
+      </div>
+
+    </div>
+<div class='container'>
+  <div class='row'>
+
+    <div class='col-1'>
+    </div>
+
+<div class='form-group text-center col-4'>
   <form id="change-password">
     <fieldset>
       <legend>Change Password!</legend>
-      <input name="passwords[old]" type="password" placeholder="Old Password" required>
-      <input name="passwords[new]" type="password" placeholder="New Password" required>
-      <input type="submit" value="Change Password!">
+      <input name="passwords[old]" class="form-control" type="password" placeholder="Old Password" required>
+      <input name="passwords[new]" class="form-control" type="password" placeholder="New Password" required>
+      <input type="submit" class="btn btn-primary" value="Change Password!">
     </fieldset>
   </form>
+</div>
 
-  <form id="sign-out">
+<div class='col-2'>
+</div>
+
+<div class='form-group text-center col-4'>
+  <form id="sign-out" class='form-group text-center'>
     <fieldset>
       <legend>Sign Out</legend>
-      <input type="submit" value="Sign Out!">
+      <input type="submit" class="btn btn-primary" value="Sign Out!">
     </fieldset>
   </form>
-    </body>
+</div>
+
+<div class='col-1'>
+</div>
+</div>
+</div>
+
+
+  <div class='container'>
+
+      <div class='col-1'>
+      </div>
+  <form id="add-listItem">
+    <div class='form-group text-center col-6'>
+    <fieldset>
+      <legend>Add a list item to your bucket</legend>
+      <input name="listItem[title]" type="text" class="form-control" placeholder="Title" required>
+      <textarea name="listItem[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+      <input type="submit" class="btn btn-primary" value="Add List Item">
+    </fieldset>
+  </div>
+  </form>
+    </div>
+  <div class="content container"></div>
+</body>
+
 </html>

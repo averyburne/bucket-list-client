@@ -1,5 +1,6 @@
 'use strict'
 const store = require('./../store')
+const listItemEvents = require('../listItems/events')
 
 const onSignInSuccess = function (response) {
   $('#message').text(response.user.email + ' Successfully signed in')
@@ -10,9 +11,11 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-up').trigger('reset')
+  listItemEvents.onIndex()
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('#add-listItem').show()
   clearMessage()
 }
 
@@ -73,6 +76,9 @@ const onSignOutSuccess = function () {
   $('#change-password').trigger('reset')
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#add-listItem').trigger('reset')
+  $('#add-listItem').hide()
+  $('.content').hide()
   $('#message').text('Signed out successfully')
   store.user = null
 

@@ -1,0 +1,31 @@
+<div class="row">
+  {{#each listItems as |listItem|}}
+  <section class="col-3" data-id="{{listItem._id}}">
+    <h6>Title:</h6>
+    <p>
+      {{#if listItem.title}}
+        {{listItem.title}}
+      {{else}}
+        No title provided.
+      {{/if}}
+    </p>
+    <h6>Description:</h6>
+    <p>
+      {{#if listItem.description}}
+        {{listItem.description}}
+      {{else}}
+        No description provided.
+      {{/if}}
+    </p>
+      {{#if listItem.completed}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed"
+         checked>
+      <label for="completed">Complete</label>
+      {{else}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed">
+      <label for="completed">Complete</label>
+      {{/if}}
+    {{> remove-listItem id=listItem._id}}
+  </section>
+  {{/each}}
+</div>
