@@ -78,6 +78,7 @@ const onSignOutSuccess = function () {
   $('#sign-up').show()
   $('#add-listItem').trigger('reset')
   $('#add-listItem').hide()
+  $('.content').hide()
   $('#message').text('Signed out successfully')
   store.user = null
 
