@@ -28,7 +28,7 @@ const onUpdate = function (event) {
 const onDelete = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.delete(data)
+  api.destroy(id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onDeleteFailure)
 }
