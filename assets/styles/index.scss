@@ -1,12 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
 
+.btn-outline-danger {
+  border: 3px solid;
+  margin: 5px;
+}
+
 .btn-outline-primary {
+  border: 3px solid;
+  margin: 5px;
+}
+
+.btn-outline-warning {
   border: 3px solid;
   margin: 5px;
 }
 
 #message {
   height: 20px;
-
 }
