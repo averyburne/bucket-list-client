@@ -55,6 +55,7 @@ const addHandlers = () => {
   $('.content').on('click', '.remove-listItem', onDelete)
   $('.content').on('click', '.update-listItem', onUpdate)
   $('.content').on('click', '.completed', onUpdate)
+  $('#add-listItem').hide()
 }
 
 module.exports = {

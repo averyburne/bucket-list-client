@@ -13,6 +13,7 @@ const onSignInSuccess = function (response) {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('#add-listItem').show()
   clearMessage()
 }
 
@@ -73,6 +74,8 @@ const onSignOutSuccess = function () {
   $('#change-password').trigger('reset')
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#add-listItem').trigger('reset')
+  $('#add-listItem').hide()
   $('#message').text('Signed out successfully')
   store.user = null
 
