@@ -25,7 +25,7 @@ const onIndexSuccess = function (data) {
     $('#message').text("You don't have any list Items!")
   }
 
-  $('#message').removeClass('failure')()
+  $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
 }
