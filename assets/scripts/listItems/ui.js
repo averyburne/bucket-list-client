@@ -23,11 +23,9 @@ const onIndexSuccess = function (data) {
   $('.content').html(showListItemsHtml)
   if (data.listItem.length === 0) {
     $('#message').text("You don't have any list Items!")
-  } else {
-    $('#message').text('Got them, check below')
   }
 
-  $('#message').removeClass('failure')
+  $('#message').removeClass('failure')()
   $('#message').addClass('success')
   clearMessage()
 }
