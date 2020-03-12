@@ -14,7 +14,6 @@ const onCreate = function (event) {
 }
 
 const onIndex = function (event) {
-  event.preventDefault()
   api.index()
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
@@ -51,7 +50,7 @@ const onDelete = function (event) {
 
 const addHandlers = () => {
   $('#add-listItem').on('submit', onCreate)
-  $('#get-listItems').on('click', onIndex)
+  // $('#get-listItems').on('click', onIndex)
   $('.content').on('click', '.remove-listItem', onDelete)
   $('.content').on('click', '.update-listItem', onUpdate)
   $('.content').on('click', '.completed', onUpdate)
