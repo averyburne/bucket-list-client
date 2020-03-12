@@ -6,6 +6,7 @@ const onCreateSuccess = function () {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('#add-listItem').trigger('reset')
   clearMessage()
 }
 
