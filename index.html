@@ -14,6 +14,13 @@
 </head>
 
 <body>
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+  <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<script src="dark-mode-switch.min.js"></script>
+
   <div class='container'>
     <div class='row'>
       <div class='col-12 text-center'>
@@ -36,7 +43,7 @@
       <legend>Sign In!</legend>
       <input name="credentials[email]" class="form-control" type="email" placeholder="Email">
       <input name="credentials[password]" class="form-control" type="password" placeholder="Password">
-      <input type="submit" class="btn btn-primary" value="Sign In!">
+      <input type="submit" class="btn btn-outline-primary" value="Sign In!">
 
     </fieldset>
   </form>
@@ -53,7 +60,7 @@
       <input name="credentials[email]" type="email" class="form-control" placeholder="example@example.com">
       <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
       <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm Password">
-      <input type="submit" class="btn btn-primary" value="Sign Up!">
+      <input type="submit" class="btn btn-outline-primary" value="Sign Up!">
 
     </fieldset>
   </form>
