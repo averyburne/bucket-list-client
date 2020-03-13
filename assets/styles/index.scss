@@ -3,6 +3,14 @@
 [data-theme="dark"] {
   background-color: #111 !important;
   color: #eee;
+  h4 {
+    color: #EAFF00;
+  }
+  .items {
+    border: 2px solid yellow;
+    padding: 8px;
+    border-radius: 10%;
+  }
 }
 
 .btn-outline-danger {
@@ -22,4 +30,14 @@
 
 #message {
   height: 20px;
+}
+
+h4 {
+  color: #black;
+}
+
+.items {
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 10%;
 }
