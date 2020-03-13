@@ -114,12 +114,17 @@
       <legend>Add a list item to your bucket</legend>
       <input name="listItem[title]" type="text" class="form-control" placeholder="Title" required>
       <textarea name="listItem[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+      <input name="listItem[lat]" type="number" class="form-control" placeholder="Lat">
+      <input name="listItem[lng]" type="number" class="form-control" placeholder="Lng">
       <input type="submit" class="btn btn-outline-primary" value="Add List Item">
     </fieldset>
   </div>
   </form>
     </div>
+  <div id="map"></div>
   <div class="content container"></div>
+  <div id='map-info'></div>
+  <div id='map-script'></div>
 </body>
 
 </html>

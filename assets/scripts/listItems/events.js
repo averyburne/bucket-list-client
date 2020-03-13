@@ -1,6 +1,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const mapUi = require('../maps/ui')
 
 const onCreate = function (event) {
   event.preventDefault()
@@ -16,6 +17,7 @@ const onCreate = function (event) {
 const onIndex = function (event) {
   api.index()
     .then(ui.onIndexSuccess)
+    .then(mapUi.makeMap)
     .catch(ui.onIndexFailure)
 }
 
