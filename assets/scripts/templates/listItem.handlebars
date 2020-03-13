@@ -1,7 +1,9 @@
 <div class="row">
   {{#each listItems as |listItem|}}
-  <section class="items" class="col-3" data-id="{{listItem._id}}">
+
+  <<section class="col-12 col-md-3 col-sm-6 text-center" data-id="{{listItem._id}}">
     <h4>Title:</h4>
+  
     <p>
       {{#if listItem.title}}
         {{listItem.title}}
