@@ -38,7 +38,10 @@ const onIndexSuccess = function (data) {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
-  store.pointers = pointers
+
+  $('#map-info').data({ pointers: pointers })
+
+  $('#map').show()
 }
 
 const onIndexFailure = function () {

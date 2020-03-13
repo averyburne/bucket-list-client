@@ -2,7 +2,7 @@ const mapThing = require('../templates/map.handlebars')
 
 const makeMap = function () {
   const showMapHTML = mapThing()
-  $('.content').html(showMapHTML)
+  $('#map-script').html(showMapHTML)
 }
 
 module.exports = {
