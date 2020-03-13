@@ -7,4 +7,5 @@ $(() => {
 // const example = require('./example')
   authEvents.addHandlers()
   listEvents.addHandlers()
+  $('#map').hide()
 })
