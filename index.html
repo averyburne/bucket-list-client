@@ -14,6 +14,12 @@
 </head>
 
 <body>
+  <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="darkSwitch" checked/>
+  <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<script src="dark-mode-switch-master/dark-mode-switch.min.js"></script>
+
   <div class='container'>
     <div class='row'>
       <div class='col-12 text-center'>
@@ -29,14 +35,14 @@
 <div class='col-1'>
 </div>
 
-    <div class='form-group text-center col-4'>
+    <div class='form-group text-center col-12 col-sm-4'>
   <form id="sign-in">
     <fieldset>
 
       <legend>Sign In!</legend>
       <input name="credentials[email]" class="form-control" type="email" placeholder="Email">
       <input name="credentials[password]" class="form-control" type="password" placeholder="Password">
-      <input type="submit" class="btn btn-primary" value="Sign In!">
+      <input type="submit" class="btn btn-outline-primary" value="Sign In!">
 
     </fieldset>
   </form>
@@ -45,7 +51,7 @@
     <div class='col-2'>
     </div>
 
-  <div class='form-group text-center col-4'>
+  <div class='form-group text-center col-12 col-sm-4'>
   <form id="sign-up">
     <fieldset>
 
@@ -53,7 +59,7 @@
       <input name="credentials[email]" type="email" class="form-control" placeholder="example@example.com">
       <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
       <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm Password">
-      <input type="submit" class="btn btn-primary" value="Sign Up!">
+      <input type="submit" class="btn btn-outline-primary" value="Sign Up!">
 
     </fieldset>
   </form>
@@ -69,13 +75,13 @@
     <div class='col-1'>
     </div>
 
-<div class='form-group text-center col-4'>
+<div class='form-group text-center col-12 col-sm-4'>
   <form id="change-password">
     <fieldset>
       <legend>Change Password!</legend>
       <input name="passwords[old]" class="form-control" type="password" placeholder="Old Password" required>
       <input name="passwords[new]" class="form-control" type="password" placeholder="New Password" required>
-      <input type="submit" class="btn btn-primary" value="Change Password!">
+      <input type="submit" class="btn btn-outline-danger" value="Change Password!">
     </fieldset>
   </form>
 </div>
@@ -83,11 +89,11 @@
 <div class='col-2'>
 </div>
 
-<div class='form-group text-center col-4'>
+<div class='form-group text-center col-12 col-sm-4'>
   <form id="sign-out" class='form-group text-center'>
     <fieldset>
       <legend>Sign Out</legend>
-      <input type="submit" class="btn btn-primary" value="Sign Out!">
+      <input type="submit" class="btn btn-outline-warning" value="Sign Out!">
     </fieldset>
   </form>
 </div>
@@ -103,12 +109,12 @@
       <div class='col-1'>
       </div>
   <form id="add-listItem">
-    <div class='form-group text-center col-6'>
+    <div class='form-group text-center col-12 col-sm-6'>
     <fieldset>
       <legend>Add a list item to your bucket</legend>
       <input name="listItem[title]" type="text" class="form-control" placeholder="Title" required>
       <textarea name="listItem[description]" type="text" class="form-control" placeholder="Description" required></textarea>
-      <input type="submit" class="btn btn-primary" value="Add List Item">
+      <input type="submit" class="btn btn-outline-primary" value="Add List Item">
     </fieldset>
   </div>
   </form>
