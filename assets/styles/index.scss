@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
 .btn-outline-danger {
   border: 3px solid;
   margin: 5px;
