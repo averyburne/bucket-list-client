@@ -1,5 +1,6 @@
 'use strict'
 const showListItemsTemplate = require('../templates/listItem.handlebars')
+const store = require('../store')
 
 const onCreateSuccess = function () {
   $('#message').text('Successfully added a list item to your bucket')
@@ -25,9 +26,19 @@ const onIndexSuccess = function (data) {
     $('#message').text("You don't have any list Items!")
   }
 
+  const pointers = []
+  for(let i = 0; i < data.listItem.length; i++) {
+    if(data.listItem[i].lat !== null && data.listItem[i].lng !== null) {
+        if(data.listItem[i].lat !== undefined && data.listItem[i].lng !== undefined) {
+          pointers.push({lat: data.listItem[i].lat, lng: data.listItem[i].lng})
+        }
+    }
+  }
+
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
+  store.pointers = pointers
 }
 
 const onIndexFailure = function () {

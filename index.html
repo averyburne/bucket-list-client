@@ -114,12 +114,31 @@
       <legend>Add a list item to your bucket</legend>
       <input name="listItem[title]" type="text" class="form-control" placeholder="Title" required>
       <textarea name="listItem[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+      <input name="listItem[lat]" type="number" class="form-control" placeholder="Lat">
+      <input name="listItem[lng]" type="number" class="form-control" placeholder="Lng">
       <input type="submit" class="btn btn-outline-primary" value="Add List Item">
     </fieldset>
   </div>
   </form>
     </div>
   <div class="content container"></div>
+  <div id="map"></div>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-dlKwSeLAqyRPt-8pRgUMpJnzox0asZg"></script>
+  <script>
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+    </script> -->
+    <!-- Uncomment the following script to initialize by calling the file onIndex -->
+
+
+<div id='map-script'></div>
+    <!-- <script src="assets/scripts/maps/map_initialize.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-dlKwSeLAqyRPt-8pRgUMpJnzox0asZg&callback=initMap">
+    </script> -->
 </body>
 
 </html>
