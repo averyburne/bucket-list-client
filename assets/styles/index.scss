@@ -11,6 +11,11 @@
     padding: 8px;
     border-radius: 10%;
   }
+  .btn-outline-warning {
+    border: 3px solid;
+    margin: 5px;
+    color: orange;
+  }
 }
 
 .btn-outline-danger {
@@ -26,6 +31,7 @@
 .btn-outline-warning {
   border: 3px solid;
   margin: 5px;
+  color: black;
 }
 
 #message {
