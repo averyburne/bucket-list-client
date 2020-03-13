@@ -1,7 +1,7 @@
 <div class="row">
   {{#each listItems as |listItem|}}
-  <section class="col-3" data-id="{{listItem._id}}">
-    <h6>Title:</h6>
+  <section class="items" class="col-3" data-id="{{listItem._id}}">
+    <h4>Title:</h4>
     <p>
       {{#if listItem.title}}
         {{listItem.title}}
@@ -9,7 +9,7 @@
         No title provided.
       {{/if}}
     </p>
-    <h6>Description:</h6>
+    <h4>Description:</h4>
     <p>
       {{#if listItem.description}}
         {{listItem.description}}
