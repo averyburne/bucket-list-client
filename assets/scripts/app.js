@@ -9,5 +9,11 @@ $(() => {
   authEvents.addHandlers()
   listEvents.addHandlers()
   $('#map').hide()
-  dark()
+  $('#darkSwitch').on('click', function () {
+   if ($('#darkSwitch').prop("checked") == true) {
+     document.body.setAttribute("data-theme", "dark")
+   } else {
+     document.body.setAttribute("data-theme", "light")
+   }
+  })
 })
