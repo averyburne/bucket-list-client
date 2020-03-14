@@ -86,6 +86,8 @@ const onSignOutSuccess = function () {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
+
+  $('#map').hide()
 }
 
 const onSignOutFailure = function (error) {
