@@ -14,27 +14,26 @@
 </head>
 
 <body>
-  <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="darkSwitch" checked=true>
-  <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-</div>
-<script src="assets/scripts/dark-mode-switch-master/dark-mode-switch.min.js"></script>
-
   <div class='container'>
-    <div class='row'>
-      <div class='col-12 text-center'>
-        <h1>Bucket List</h1>
-      </div>
-      <div class='col-12 text-center'>
-        <h5 id='message'></h5>
-      </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="darkSwitch" checked=true>
+      <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
     </div>
+    <script src="assets/scripts/dark-mode-switch-master/dark-mode-switch.min.js"></script>
   </div>
 
-    <div class='row text-center col-12'>
-      <div class='col-1'>
+  <div class='container'>
+      <div class='text-center'>
+        <h1>Bucket List</h1>
       </div>
-      <div class='form-group text-center col-12 col-sm-4'>
+      <div class='text-center'>
+        <h5 id='message'></h5>
+      </div>
+  </div>
+
+<div class='container'>
+  <div class='row'>
+      <div class='form-group text-center col-12 col-sm-5'>
         <form id="sign-in">
           <fieldset>
 
@@ -46,10 +45,10 @@
           </fieldset>
         </form>
       </div>
-      <div class='col-2'>
+      <div class='col-sm-2'>
       </div>
 
-      <div class='form-group text-center col-12 col-sm-4'>
+      <div class='form-group text-center col-12 col-sm-5'>
         <form id="sign-up">
           <fieldset>
 
@@ -62,52 +61,15 @@
           </fieldset>
         </form>
       </div>
-
-      <div class='col-1'>
-      </div>
-
-    </div>
-<div class='container'>
-  <div class='row'>
-
-    <div class='col-1'>
-    </div>
-
-<div class='form-group text-center col-12 col-sm-4'>
-  <form id="change-password">
-    <fieldset>
-      <legend>Change Password!</legend>
-      <input name="passwords[old]" class="form-control" type="password" placeholder="Old Password" required>
-      <input name="passwords[new]" class="form-control" type="password" placeholder="New Password" required>
-      <input type="submit" class="btn btn-outline-danger" value="Change Password!">
-    </fieldset>
-  </form>
 </div>
-
-<div class='col-2'>
-</div>
-
-<div class='form-group text-center col-12 col-sm-4'>
-  <form id="sign-out" class='form-group text-center'>
-    <fieldset>
-      <legend>Sign Out</legend>
-      <input type="submit" class="btn btn-outline-warning" value="Sign Out!">
-    </fieldset>
-  </form>
-</div>
-
-<div class='col-1'>
-</div>
-</div>
-</div>
+  </div>
 
 
   <div class='container'>
-
-      <div class='col-1'>
-      </div>
-  <form id="add-listItem">
+<div class='row'>
+<div class='col-sm-3'></div>
     <div class='form-group text-center col-12 col-sm-6'>
+      <form id="add-listItem">
     <fieldset>
       <legend>Add a list item to your bucket</legend>
       <input name="listItem[title]" type="text" class="form-control" placeholder="Title" required>
@@ -116,13 +78,60 @@
       <input name="listItem[lng]" type="number" step='0.0001' class="form-control" placeholder="Lng">
       <input type="submit" class="btn btn-outline-primary" value="Add List Item">
     </fieldset>
-  </div>
+
   </form>
     </div>
+    <div class='col-sm-3'></div>
+</div>
+    </div>
+
+
+    <div class='container'>
   <div id="map"></div>
+</div>
+<br>
   <div class="content container"></div>
   <div id='map-info'></div>
   <div id='map-script'></div>
+
+<br>
+<br>
+
+  <div class='container'>
+    <div class='row'>
+
+      <div class='col-1'>
+      </div>
+
+  <div class='form-group text-center col-12 col-sm-4'>
+    <form id="change-password">
+      <fieldset>
+        <legend>Change Password!</legend>
+        <input name="passwords[old]" class="form-control" type="password" placeholder="Old Password" required>
+        <input name="passwords[new]" class="form-control" type="password" placeholder="New Password" required>
+        <input type="submit" class="btn btn-outline-danger" value="Change Password!">
+      </fieldset>
+    </form>
+  </div>
+
+  <div class='col-2'>
+  </div>
+
+  <div class='form-group text-center col-12 col-sm-4'>
+    <form id="sign-out" class='form-group text-center'>
+      <fieldset>
+        <legend>Sign Out</legend>
+        <input type="submit" class="btn btn-outline-warning" value="Sign Out!">
+      </fieldset>
+    </form>
+  </div>
+
+  <div class='col-1'>
+  </div>
+  </div>
+  </div>
+
+  <br>
 </body>
 
 </html>
