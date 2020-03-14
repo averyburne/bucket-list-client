@@ -12,7 +12,7 @@ function initMap() {
   // The marker, positioned at Uluru
   // const marker = new google.maps.Marker({position: uluru, map: map});
 
-  let places = $('#map-info').data()
+  let places = document.getElementById('map-info').value
   places = places.pointers
 
   for (let i=0; i < places.length; i++) {

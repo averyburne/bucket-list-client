@@ -39,7 +39,7 @@ const onIndexSuccess = function (data) {
   $('#message').addClass('success')
   clearMessage()
 
-  $('#map-info').data({ pointers: pointers })
+  $('#map-info').val({ pointers: pointers })
 
   $('#map').show()
 }
