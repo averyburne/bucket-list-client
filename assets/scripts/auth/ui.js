@@ -6,7 +6,7 @@ const onSignInSuccess = function (response) {
   $('#message').text(response.user.email + ' Successfully signed in')
   store.user = response.user
   $('#sign-in').trigger('reset')
-  $('#change-password').show()
+  $('.change-password-button').show()
   $('#sign-out').show()
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -49,6 +49,7 @@ const onSignUpFailure = function (response) {
 const onChangeSuccess = () => {
   $('#message').text(`Successfully changed password`)
   $('#change-password').trigger('reset')
+  $('.change-password-button').trigger('click')
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
@@ -73,7 +74,7 @@ const clearMessage = () => {
 
 const onSignOutSuccess = function () {
   $('#sign-out').hide()
-  $('#change-password').hide()
+  $('.change-password-button').hide()
   $('#change-password').trigger('reset')
   $('#sign-in').show()
   $('#sign-up').show()
