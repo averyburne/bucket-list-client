@@ -1,6 +1,9 @@
 # Bucket list
 
+Client Repo: [Bucket List Client Repo](https://github.com/T-hatSquad/bucket-list-client)
 API Repo: [Bucket List API](https://github.com/T-hatSquad/bucket-list-api)
+[Deployed Client](https://t-hatsquad.github.io/bucket-list-client/)
+[Deployed API](https://gentle-ocean-46464.herokuapp.com/)
 
 ## Set Up
 Browser template: [browser template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)
