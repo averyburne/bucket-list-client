@@ -1,13 +1,13 @@
 # Bucket list
 
-Client Repo: [Bucket List Client Repo](https://github.com/T-hatSquad/bucket-list-client)
-API Repo: [Bucket List API](https://github.com/T-hatSquad/bucket-list-api)
-[Deployed Client](https://t-hatsquad.github.io/bucket-list-client/)
+Client Repo: [Bucket List Client Repo](https://github.com/T-hatSquad/bucket-list-client)\
+API Repo: [Bucket List API](https://github.com/T-hatSquad/bucket-list-api)\
+[Deployed Client](https://t-hatsquad.github.io/bucket-list-client/)\
 [Deployed API](https://gentle-ocean-46464.herokuapp.com/)
 
 ## Set Up
-Browser template: [browser template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)
-To install dependencies: `npm install`
+Browser template: [browser template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)\
+To install dependencies: `npm install`\
 To run locally: `grunt serve`
 
 ## User Stories
@@ -22,7 +22,7 @@ To run locally: `grunt serve`
 - As a signed in user, I would like to cross off items to complete them.
 
 ## Wireframes
-[wireframe] (https://imgur.com/gallery/iAuZDEj)
+[Wireframe](https://imgur.com/gallery/iAuZDEj)
 
 ## Planning
 
@@ -50,7 +50,7 @@ third group member attempted to rebase the commit with the resolved conflicts to
 original dev branch which did not have any of the changes. So the rebase would not include\
 the first changes, but "replayed" the merge from the second group member and therefore\
 making it apart of the rebase, here is a link to a picture illustrating the situation.\
-[Git workflow] (https://imgur.com/gallery/b6ny5j8)
+[Git workflow](https://imgur.com/gallery/b6ny5j8)
 
 ### Finishing MVP
 Once that Git problem was sorted out we didn't have much trouble finishing the MVP\
