@@ -75,6 +75,7 @@ const onUpdateSuccess = function () {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
+  $('#update-item').trigger('reset')
 }
 
 const onUpdateFailure = function () {
