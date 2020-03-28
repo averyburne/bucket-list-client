@@ -88,6 +88,7 @@ const onSignOutSuccess = function () {
   clearMessage()
 
   $('#map').hide()
+  $('#update-item').trigger('reset')
 }
 
 const onSignOutFailure = function (error) {

@@ -2,6 +2,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 const mapUi = require('../maps/ui')
+const store = require('../store')
 
 const onCreate = function (event) {
   event.preventDefault()
@@ -26,8 +27,8 @@ const onUpdate = function (event) {
   const id = $(event.target).data('id')
   const completed = !$(event.target).data('bool')
   const data = {
-    "listItem": {
-      "completed": completed
+    listItem: {
+      completed: completed
     }
   }
 
@@ -37,6 +38,19 @@ const onUpdate = function (event) {
     })
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
+}
+
+const onUpdateBtn = function (event) {
+  event.preventDefault()
+  const id = store.toUpdateId
+  const data = getFormFields(event.target)
+
+  api.update(id, data)
+    .then(function () {
+      onIndex(event)
+    })
+    .then(ui.onUpdateBtnSuccess)
+    .catch(ui.onUpdateBtnFailure)
 }
 
 const onDelete = function (event) {
@@ -50,19 +64,26 @@ const onDelete = function (event) {
     .catch(ui.onDeleteFailure)
 }
 
+const onUpdateAttempt = function (event) {
+  store.toUpdateId = $(event.target).data('id')
+}
+
 const addHandlers = () => {
   $('#add-listItem').on('submit', onCreate)
-  // $('#get-listItems').on('click', onIndex)
   $('.content').on('click', '.remove-listItem', onDelete)
+  $('#update-item').on('submit', onUpdateBtn)
+  $('.content').on('click', '.updateBtn-listItem', onUpdateAttempt)
   $('.content').on('click', '.update-listItem', onUpdate)
   $('.content').on('click', '.completed', onUpdate)
   $('#add-listItem').hide()
+  $('#clearit').on('click', () => { store.toUpdateId = null })
 }
 
 module.exports = {
   onCreate,
   onIndex,
   onUpdate,
+  onUpdateBtn,
   onDelete,
   addHandlers
 }
