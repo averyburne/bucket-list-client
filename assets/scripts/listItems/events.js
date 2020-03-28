@@ -27,8 +27,8 @@ const onUpdate = function (event) {
   const id = $(event.target).data('id')
   const completed = !$(event.target).data('bool')
   const data = {
-    "listItem": {
-      "completed": completed
+    listItem: {
+      completed: completed
     }
   }
 
@@ -49,8 +49,8 @@ const onUpdateBtn = function (event) {
     .then(function () {
       onIndex(event)
     })
-    .then(ui.onUpdateSuccess)
-    .catch(ui.onUpdateFailure)
+    .then(ui.onUpdateBtnSuccess)
+    .catch(ui.onUpdateBtnFailure)
 }
 
 const onDelete = function (event) {

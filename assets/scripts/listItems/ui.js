@@ -1,6 +1,5 @@
 'use strict'
 const showListItemsTemplate = require('../templates/listItem.handlebars')
-const store = require('../store')
 
 const onCreateSuccess = function () {
   $('#message').text('Successfully added a list item to your bucket')
@@ -27,11 +26,11 @@ const onIndexSuccess = function (data) {
   }
 
   const pointers = []
-  for(let i = 0; i < data.listItem.length; i++) {
-    if(data.listItem[i].lat !== null && data.listItem[i].lng !== null) {
-        if(data.listItem[i].lat !== undefined && data.listItem[i].lng !== undefined) {
-          pointers.push({lat: data.listItem[i].lat, lng: data.listItem[i].lng})
-        }
+  for (let i = 0; i < data.listItem.length; i++) {
+    if (data.listItem[i].lat !== null && data.listItem[i].lng !== null) {
+      if (data.listItem[i].lat !== undefined && data.listItem[i].lng !== undefined) {
+        pointers.push({ lat: data.listItem[i].lat, lng: data.listItem[i].lng })
+      }
     }
   }
 
@@ -75,7 +74,6 @@ const onUpdateSuccess = function () {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   clearMessage()
-  $('#update-item').trigger('reset')
 }
 
 const onUpdateFailure = function () {
@@ -84,6 +82,23 @@ const onUpdateFailure = function () {
   $('#message').removeClass('success')
   $('#message').addClass('failure')
   clearMessage()
+}
+
+const onUpdateBtnSuccess = function () {
+  $('#message2').text('Successfully updated list item')
+
+  $('#message2').removeClass('failure')
+  $('#message2').addClass('success')
+  clearMessage2()
+  $('#update-item').trigger('reset')
+}
+
+const onUpdateBtnFailure = function () {
+  $('#message2').text('Could not update list item')
+
+  $('#message2').removeClass('success')
+  $('#message2').addClass('failure')
+  clearMessage2()
 }
 
 const onClearSuccess = function () {
@@ -106,6 +121,14 @@ const clearMessage = function () {
   }, 5000)
 }
 
+const clearMessage2 = function () {
+  setTimeout(function () {
+    $('#message2').text('')
+    $('#message2').removeClass('failure')
+    $('#message2').removeClass('success')
+  }, 5000)
+}
+
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
@@ -115,6 +138,8 @@ module.exports = {
   onDeleteFailure,
   onUpdateSuccess,
   onUpdateFailure,
+  onUpdateBtnSuccess,
+  onUpdateBtnFailure,
   onClearSuccess,
   onClearFailure
 }
